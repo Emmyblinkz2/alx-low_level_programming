@@ -1,22 +1,22 @@
 #include <stdio.h>
 /**
- * main -Entry point
+ * main - Entry point
  *
  * Return: Always 0 (success/correct)
  */
-int main(vold)
+int main(void)
 
 {
-char aphabet;
+char alphabet;
 
-for (aphabet = 'a'; aphabet <= 'z'; aphabet++)
-if (aphabet == 'q')
+for (alphabet = 'a'; alphabet <= 'z' alphabet++)
+if (alphabet == 'q')
 continue;
 
-else if (aphabet == 'e')
+else if (alphabet == 'e')
 continue;
 
-putchar(aphabet);
+putchar(alphabet);
 
 putchar('\n');
 
