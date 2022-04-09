@@ -5,6 +5,7 @@
  * Return: Always 0 (success/correct)
  */
 int main(void)
+
 {
 int i;
 
@@ -14,4 +15,5 @@ printf("%i", i);
 printf("\n");
 
 return (0);
+
 }
