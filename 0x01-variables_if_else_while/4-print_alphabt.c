@@ -3,22 +3,20 @@
  * main - Entry point
  *
  * Return: Always 0 (success/correct)
- */
+*/
 int main(void)
 
 {
-char alphabet;
+char lower_case;
+char upper_case;
 
-for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
-if (alphabet == 'q')
-continue;
+for (lower_case = 'a'; lower_case <= 'z'; lower_case++)
+putchar(lower_case);
 
-else if (alphabet == 'e')
-continue;
+for (upper_case = 'A'; upper_case <= 'Z'; upper_case++)
+putchar(upper_case);
 
-putchar(alphabet);
-
-putchar('\n');
+putchar ('\n');
 
 return (0);
 
