@@ -1,24 +1,28 @@
+
+
+
+
+
 #include <stdio.h>
 /**
  * main - Entry point
  *
  * Return: Always 0 (success/correct)
- */
+*/
 int main(void)
+
 {
-char alphabet;
-{
-for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+char lower_case;
 
-if (alphabet == 'q')
+for (lower_case = 'a'; lower_case <= 'z'; lower_case++)
+if (lower_case == 'e')
 continue;
-
-else if (alphabet == 'e')
+else if (lower_case == 'q')
 continue;
+putchar(lower_case);
 
-putchar(alphabet);
-}
-putchar('\n');
+putchar ('\n');
 
 return (0);
+
 }
