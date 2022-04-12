@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <unistd.h>
 /**
@@ -24,9 +23,6 @@ if (i != 98 || j != 99)
 {
 putchar('\n');
 putchar(' ');
-}
-}
-}
 }
 putchar('\n');
 
