@@ -1,41 +1,30 @@
-#include "main.h"
-/**
- * is_numerical - check if it is a digit
- * @n: Number
- * Return: If is a number, return 1 else return 0
- */
-int is_numerical(unsigned int n)
-{
-return (n >= '0' &&  n <= '9');
-}
+​#​include​ ​"​main.h​"
+/*​* 
+ ​ * _atoi - convert a string to an integer. 
+ ​ * @s: char type string 
+ ​ * Return: integer converted 
+ ​ ​*/
 
-/**
- * _atoi - convert a string to an integer
- *@s: String
- * Return: Return the num
- */
-int _atoi(char *s)
-{
-unsigned int number, i;
-int sign;
-
-sign = 1;
-number = 0;
-
-for (i = 0; s[i] != '\0'; i++)
-{
-if (is_numerical(s[i]))
-{
-number = (s[i] - 48) + number * 10;
-
-if (s[i + 1] == ' ')
-break;
-}
-else if (s[i] == '-')
-{
-sign *= -1;
-}
-
-{
-return (number *sign);
-}
+int​ ​_atoi​(​char​ *s) 
+ ​{ 
+ ​        ​int​ i; 
+ ​        ​int​ res = ​0​; 
+ ​        ​int​ sig = -​1​; 
+ ​        ​int​ ​brk​ = ​0​; 
+  
+ ​        ​for​ (i = ​0​; s[i] != ​'​\0​'​; i++) 
+ ​        { 
+ ​                ​if​ (s[i] == ​'​-​'​) 
+ ​                        sig = sig * -​1​; 
+ ​                ​if​ (s[i] >= ​'​0​'​ && s[i] <= ​'​9​'​) 
+ ​                { 
+ ​                        res = res * ​10​; 
+ ​                        res -= (s[i] - ​'​0​'​); 
+ ​                        ​brk​ = ​1​; 
+ ​                } 
+ ​                ​else​ ​if​ (​brk​ == ​1​) 
+ ​                        ​break​; 
+ ​        } 
+ ​        res = sig * res; 
+ ​        ​return​ (res); 
+ ​}
