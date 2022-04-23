@@ -1,39 +1,24 @@
-#include "main.h"
+include "main.h"
 
 /**
- * print_number - print integers
- * @n: integer value.
+ * rot13 - encodes a string using rot13.
+ * @s: the string to encode.
  *
- * Return: nothing
+ * Return: s
  */
-void print_number(int n)
+char *rot13(char *s)
 {
-	unsigned int a, b, count, tmp, pow;
+	int i, j;
 
-	a = n;
-	pow = b = 1;
+	char *a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *b = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	if (n < 0)
-	{
-		a *= -1;
-		_putchar('-');
-	}
-
-	tmp = a;
-
-	while (tmp > 9)
-	{
-		b++;
-		tmp /= 10;
-	}
-
-	for (count = 1; count < b; count++)
-		pow *= 10;
-
-	while (pow > 1)
-	{
-		_putchar((a / pow) % 10 + '0');
-		pow = pow / 10;
-	}
-	_putchar(a % 10 + '0');
+	for (i = 0; s[i] != '\0'; i++)
+		for (j = 0; a[j] != '\0'; j++)
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+				break;
+			}
+	return (s);
 }
